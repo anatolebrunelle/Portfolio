@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Rivera — CS Student & Developer</title>
+<meta name="description" content="Portfolio of Alex Rivera, a computer science student building web projects and learning in public.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="mark">AR<span class="mark-dot">.</span></a>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#now">Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <p class="hero-eyebrow">Computer science student, class of 2027</p>
+    <h1 class="hero-title">
+      I build things for the web<br>
+      and I'm still figuring out how far that can go.
+    </h1>
+    <p class="hero-sub">
+      I'm Alex — currently studying computer science and spending most of my
+      free time writing code that solves small, real problems. This site is
+      where I keep track of what I've built.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">See my projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about" class="about wrap">
+    <div class="section-head">
+      <h2>About</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-text">
+        I'm a third-year computer science student with a habit of starting
+        side projects faster than I finish them — though I'm working on that.
+        I like the parts of programming where a UI decision and a data
+        structure decision end up being the same problem. Outside of class
+        and code, I'm usually reading sci-fi, climbing, or arguing about
+        keyboard layouts with people who did not ask.
+      </p>
+      <div class="about-skills">
+        <p class="skills-label">Currently working with</p>
+        <ul class="skill-chips">
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>SQL</li>
+          <li>Java</li>
+          <li>Git</li>
+          <li>HTML / CSS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects wrap">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p class="section-note">A few things I've built, mostly for class or out of curiosity.</p>
+    </div>
+
+    <ul class="project-list">
+
+      <li class="project-row">
+        <div class="project-main">
+          <h3 class="project-title">Campus Eats</h3>
+          <p class="project-desc">
+            A web app that pulls live wait times from dining halls so students
+            can see which one is actually worth the walk. Built for a
+            software engineering course, now something I actually use.
+          </p>
+          <ul class="tech-tags">
+            <li>React</li>
+            <li>Node.js</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live demo</a>
+          <a href="#" class="project-link">Source</a>
+        </div>
+      </li>
+
+      <li class="project-row">
+        <div class="project-main">
+          <h3 class="project-title">Study Session Timer</h3>
+          <p class="project-desc">
+            A Pomodoro-style timer with shared rooms, so friends can study
+            "together" while in different dorms. My first project using
+            WebSockets, which took longer to understand than to build.
+          </p>
+          <ul class="tech-tags">
+            <li>JavaScript</li>
+            <li>Express</li>
+            <li>Socket.io</li>
+          </ul>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live demo</a>
+          <a href="#" class="project-link">Source</a>
+        </div>
+      </li>
+
+      <li class="project-row">
+        <div class="project-main">
+          <h3 class="project-title">Course Prereq Visualizer</h3>
+          <p class="project-desc">
+            An interactive graph of my degree's course prerequisites, because
+            the official version is a PDF table that nobody can read. Built
+            to actually plan my next three semesters.
+          </p>
+          <ul class="tech-tags">
+            <li>Python</li>
+            <li>D3.js</li>
+            <li>Flask</li>
+          </ul>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live demo</a>
+          <a href="#" class="project-link">Source</a>
+        </div>
+      </li>
+
+      <li class="project-row">
+        <div class="project-main">
+          <h3 class="project-title">Terminal Chess</h3>
+          <p class="project-desc">
+            A two-player chess game that runs entirely in the terminal, built
+            to actually understand game-state logic instead of relying on a
+            library to hide it from me.
+          </p>
+          <ul class="tech-tags">
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Source</a>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="now" class="now wrap">
+    <div class="section-head">
+      <h2>Now</h2>
+    </div>
+    <ul class="now-list">
+      <li><span class="now-tag">Learning</span> TypeScript and getting comfortable with statically-typed frontend code</li>
+      <li><span class="now-tag">Reading</span> a database systems textbook, one chapter behind schedule</li>
+      <li><span class="now-tag">Looking for</span> a summer internship in software engineering</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact wrap">
+    <div class="section-head">
+      <h2>Get in touch</h2>
+    </div>
+    <p class="contact-text">
+      I'm looking for internships and I'm always happy to talk about a
+      project, a course, or a bug that took too long to fix. The fastest way
+      to reach me is email.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:alex.rivera@example.com" class="contact-link">alex.rivera@example.com</a>
+      <a href="https://github.com/yourusername" class="contact-link">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" class="contact-link">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <p>Alex Rivera — built with HTML, CSS and a little too much coffee.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
