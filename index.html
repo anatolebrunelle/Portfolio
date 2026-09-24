@@ -43,30 +43,20 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <div class="wrap">
-      <div class="hero-copy">
-        <p class="hero-eyebrow">Anatole Brunelle — Chaville, France</p>
-        <h1 class="reveal">J'ai passé dix ans à chronométrer des courses. <em>Cet été, j'ai appris à chronométrer le risque.</em></h1>
-        <p class="hero-sub reveal">Étudiant en 2ᵉ année de classe préparatoire intégrée à l'EPITA, en recherche d'un stage en cybersécurité. Formé à la gouvernance des risques fournisseurs lors d'un stage chez TotalEnergies, où j'ai conçu deux agents IA d'aide à la priorisation.</p>
-        <div class="hero-ctas reveal">
-          <a href="#work" class="btn btn-primary">Voir mes projets</a>
-          <a href="assets/CV_Anatole_Brunelle.pdf" class="btn btn-ghost" download>Télécharger mon CV</a>
-        </div>
-        <div class="hero-links reveal">
-          <a href="mailto:brunelle.anatole@gmail.com">Email</a>
-          <a href="https://github.com/anatolebrunelle" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
+    <div class="wrap hero-wrap">
+      <h1 class="hero-welcome reveal">
+        Bienvenue sur mon portfolio
+        <button type="button" class="wave-hand" id="waveHand" aria-label="Dire bonjour">👋</button>
+      </h1>
+      <p class="wave-greeting" id="waveGreeting" aria-live="polite">&nbsp;</p>
 
-      <div class="hero-dial" aria-hidden="true">
-        <svg viewBox="0 0 420 420" id="dialSvg">
-          <circle class="dial-ring" cx="210" cy="210" r="170"></circle>
-          <g id="dialTicks"></g>
-          <circle class="dial-arc" cx="210" cy="210" r="170" transform="rotate(-90 210 210)"></circle>
-          <line class="dial-hand" x1="210" y1="210" x2="210" y2="72"></line>
-          <circle class="dial-hub" cx="210" cy="210" r="5"></circle>
-          <text class="dial-label" x="210" y="248" text-anchor="middle">RISQUE · PRIORITÉ · TEMPS</text>
-        </svg>
+      <div class="hero-ctas reveal">
+        <a href="#work" class="btn btn-primary">Voir mes projets</a>
+        <a href="assets/CV_Anatole_Brunelle.pdf" class="btn btn-ghost" download>Télécharger mon CV</a>
+      </div>
+      <div class="hero-links reveal">
+        <a href="mailto:brunelle.anatole@gmail.com">Email</a>
+        <a href="https://github.com/anatolebrunelle" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </section>
@@ -146,21 +136,23 @@
       <!-- Secondary projects -->
       <div class="project-grid reveal">
         <div class="project-card">
+          <p class="p-meta">EPITA · Projet de 1ʳᵉ année, en équipe</p>
+          <h4>Projet Overdrive — city-builder steampunk</h4>
+          <p>Un city-builder sandbox steampunk en Python/Pygame : gestion de trois ressources, raids PVE automatiques, arbre de compétences et multijoueur en réseau local, développé avec des camarades de promo.</p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Pygame</span>
+            <span class="tag">Travail d'équipe</span>
+          </div>
+          <a class="p-link" href="https://github.com/N3ur0carma7/LeProjetOverdrive" target="_blank" rel="noopener">Voir le code sur GitHub →</a>
+        </div>
+        <div class="project-card">
           <p class="p-meta">Magic Makers, Paris · Stage de programmation</p>
           <h4>Un FPS en une semaine</h4>
           <p>Jeu de tir à la première personne développé seul en C#, dans le temps contraint d'un stage d'une semaine — un exercice de prototypage rapide plus que de polish.</p>
           <div class="tag-list">
             <span class="tag">C#</span>
             <span class="tag">Prototypage rapide</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <p class="p-meta">MJC de Chaville · Hauts-de-Seine Digital Games</p>
-          <h4>Un jeu de plateformes, en équipe</h4>
-          <p>Développé sur Scratch avec une équipe de cinq lycéens, puis présenté aux Hauts-de-Seine Digital Games — premier contact avec le travail en équipe sur un projet de bout en bout.</p>
-          <div class="tag-list">
-            <span class="tag">Scratch</span>
-            <span class="tag">Travail d'équipe</span>
           </div>
         </div>
       </div>
@@ -186,20 +178,7 @@
               <p>Un jeu du pendu, simple et propre.</p>
             </a>
           </li>
-          <li class="gh-item">
-            <a href="https://github.com/anatolebrunelle/nvim-config" target="_blank" rel="noopener">
-              <span class="gh-name"><span class="lang-dot"></span> nvim-config</span>
-              <span class="gh-lang">Lua</span>
-              <p>Ma configuration Neovim personnelle — je préfère un environnement que je comprends entièrement.</p>
-            </a>
-          </li>
-          <li class="gh-item">
-            <a href="https://github.com/anatolebrunelle/bashrc" target="_blank" rel="noopener">
-              <span class="gh-name"><span class="lang-dot"></span> bashrc</span>
-              <span class="gh-lang">Shell</span>
-              <p>Configuration shell, pensée pour un usage quotidien en ligne de commande.</p>
-            </a>
-          </li>
+
         </ul>
       </div>
     </div>
@@ -307,11 +286,6 @@
           <h3>Stage cybersécurité & gouvernance <span class="tl-place">— TotalEnergies, Paris</span></h3>
           <p>Refonte du Plan d'Assurance Sécurité fournisseurs ; conception de deux agents IA de priorisation des exigences par niveau de risque.</p>
         </div>
-      </div>
-
-      <div class="certs-row reveal">
-        <span class="tag">TOEIC — 905/990</span>
-        <span class="tag">PSC1 — premiers secours</span>
       </div>
     </div>
   </section>

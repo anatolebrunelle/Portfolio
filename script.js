@@ -73,36 +73,23 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---------- Hero dial: ticks + one-time draw-in ---------- */
-  var ticksGroup = document.getElementById("dialTicks");
-  if (ticksGroup) {
-    var cx = 210, cy = 210, rOuter = 170;
-    for (var i = 0; i < 60; i++) {
-      var angle = (i / 60) * Math.PI * 2;
-      var major = i % 5 === 0;
-      var rInner = major ? rOuter - 14 : rOuter - 7;
-      var x1 = cx + Math.cos(angle) * rOuter;
-      var y1 = cy + Math.sin(angle) * rOuter;
-      var x2 = cx + Math.cos(angle) * rInner;
-      var y2 = cy + Math.sin(angle) * rInner;
-      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-      line.setAttribute("x1", x1.toFixed(1));
-      line.setAttribute("y1", y1.toFixed(1));
-      line.setAttribute("x2", x2.toFixed(1));
-      line.setAttribute("y2", y2.toFixed(1));
-      line.setAttribute("class", "dial-tick" + (major ? " major" : ""));
-      ticksGroup.appendChild(line);
-    }
-  }
-
-  var dial = document.querySelector(".hero-dial");
-  if (dial) {
-    if (reduceMotion) {
-      dial.classList.add("dial-animate");
-    } else {
-      requestAnimationFrame(function () {
-        setTimeout(function () { dial.classList.add("dial-animate"); }, 150);
-      });
-    }
+  /* ---------- Hero wave: click the hand for a greeting ---------- */
+  var waveHand = document.getElementById("waveHand");
+  var waveGreeting = document.getElementById("waveGreeting");
+  if (waveHand && waveGreeting) {
+    var greetings = ["Bonjour !", "Hello !", "¡Hola!"];
+    var greetIndex = 0;
+    waveHand.addEventListener("click", function () {
+      waveGreeting.textContent = greetings[greetIndex % greetings.length];
+      greetIndex++;
+      if (!reduceMotion) {
+        waveHand.classList.remove("wave-click");
+        void waveHand.offsetWidth; /* restart animation */
+        waveHand.classList.add("wave-click");
+      }
+    });
+    waveHand.addEventListener("animationend", function (e) {
+      if (e.animationName === "wave-click") waveHand.classList.remove("wave-click");
+    });
   }
 })();
