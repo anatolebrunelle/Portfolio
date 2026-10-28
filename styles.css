@@ -1,10 +1,7 @@
-/* ============================================================
-   Anatole Brunelle — Portfolio
-   Design tokens
-   ============================================================ */
+/* Variables */
 
 :root {
-  /* Color */
+  /* Couleurs */
   --ink: #12201e;
   --ink-soft: #1c2e2b;
   --paper: #e9ede7;
@@ -17,7 +14,7 @@
   --muted: #57635a;
   --muted-on-ink: #a9b8ac;
 
-  /* Type */
+  /* Texte */
   --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
@@ -38,9 +35,7 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ============================================================
-   Reset
-   ============================================================ */
+/* Reset */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -84,9 +79,7 @@ button { font: inherit; }
   }
 }
 
-/* ============================================================
-   Skip link
-   ============================================================ */
+/* Skip link */
 
 .skip-link {
   position: absolute;
@@ -103,9 +96,7 @@ button { font: inherit; }
   top: 1rem;
 }
 
-/* ============================================================
-   Layout helpers
-   ============================================================ */
+/* Mise en page */
 
 .wrap {
   max-width: var(--max-w);
@@ -127,13 +118,6 @@ button { font: inherit; }
   padding-bottom: 1.4rem;
 }
 
-.section-head .index {
-  font-family: var(--font-body);
-  font-size: var(--fs-small);
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-
 .section-head h2 { font-size: var(--fs-h2); }
 
 .section-kicker {
@@ -149,7 +133,7 @@ button { font: inherit; }
   color: var(--ink-soft);
 }
 
-/* reveal-on-scroll — hidden state only applies once JS confirms it can reveal it again */
+/* Apparition au scroll */
 .reveal { transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
 .js .reveal {
   opacity: 0;
@@ -160,9 +144,7 @@ button { font: inherit; }
   transform: translateY(0);
 }
 
-/* ============================================================
-   Navigation
-   ============================================================ */
+/* Navigation */
 
 .site-nav {
   position: sticky;
@@ -248,15 +230,26 @@ button { font: inherit; }
   transition: width 0.1s linear;
 }
 
-/* ============================================================
-   Hero
-   ============================================================ */
+/* Hero */
 
 .hero {
+  position: relative;
+  overflow: hidden;
   padding-block: clamp(3.5rem, 8vw, 6rem) clamp(3rem, 6vw, 5rem);
 }
 
+/* Pointillés (dessinés par script.js) */
+.fx-grid {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
 .hero .wrap.hero-wrap {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,9 +376,7 @@ button { font: inherit; }
 }
 .hero-links a:hover { color: var(--ink); border-color: var(--gold); }
 
-/* ============================================================
-   About
-   ============================================================ */
+/* À propos */
 
 .about .wrap {
   display: grid;
@@ -396,18 +387,18 @@ button { font: inherit; }
 
 .about-portrait {
   position: relative;
-  width: 100%; /* Prend toute la largeur disponible */
-  max-width: 400px; /* Limite la largeur maximale (ajuste selon tes besoins) */
-  margin: 0 auto; /* Centre le conteneur */
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .about-portrait img {
-  width: 100%; /* Remplit la largeur du conteneur */
-  height: auto; /* Garde le ratio naturel */
+  width: 100%;
+  height: auto;
   border-radius: var(--radius);
   filter: saturate(1.05);
-  aspect-ratio: 3/4; /* Force le ratio 3:4 */
-  object-fit: cover; /* Assure que l'image remplit bien le conteneur */
+  aspect-ratio: 3/4;
+  object-fit: cover;
 }
 .about-portrait figcaption {
   margin-top: 0.9rem;
@@ -439,9 +430,7 @@ button { font: inherit; }
   color: var(--muted);
 }
 
-/* ============================================================
-   Work / Selected projects
-   ============================================================ */
+/* Projets */
 
 .work { background: var(--paper); }
 .section-alt { background: var(--paper-high); }
@@ -527,7 +516,7 @@ button { font: inherit; }
   line-height: 1.5;
 }
 
-/* small project grid */
+/* Petits projets */
 .project-grid {
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
   display: grid;
@@ -575,7 +564,7 @@ button { font: inherit; }
 }
 .project-card .p-link:hover { color: var(--ink); border-color: var(--gold); }
 
-/* github strip */
+/* GitHub */
 .gh-strip {
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
   border-top: 1px solid var(--line);
@@ -636,9 +625,7 @@ button { font: inherit; }
   background: var(--gold);
 }
 
-/* ============================================================
-   Skills
-   ============================================================ */
+/* Compétences */
 
 .skills-grid {
   display: grid;
@@ -678,9 +665,7 @@ button { font: inherit; }
 }
 .langs-row strong { color: var(--ink); font-weight: 600; }
 
-/* ============================================================
-   Timeline / Parcours
-   ============================================================ */
+/* Parcours */
 
 .timeline {
   position: relative;
@@ -737,9 +722,7 @@ button { font: inherit; }
 }
 .certs-row .tag { color: var(--muted); border-color: var(--line); }
 
-/* ============================================================
-   Beyond / personality
-   ============================================================ */
+/* Au-delà du code */
 
 .beyond { background: var(--surface); }
 
@@ -759,9 +742,7 @@ button { font: inherit; }
   color: var(--ink-soft);
 }
 
-/* ============================================================
-   Contact
-   ============================================================ */
+/* Contact */
 
 .contact {
   background: var(--ink);
@@ -816,9 +797,7 @@ button { font: inherit; }
 }
 .contact .btn-ghost:hover { border-color: var(--paper-high); }
 
-/* ============================================================
-   Footer
-   ============================================================ */
+/* Footer */
 
 footer.site-footer {
   background: var(--ink);
@@ -836,9 +815,7 @@ footer.site-footer {
 .site-footer a { color: var(--muted-on-ink); text-decoration: none; }
 .site-footer a:hover { color: var(--paper-high); }
 
-/* ============================================================
-   Responsive
-   ============================================================ */
+/* Responsive */
 
 @media (max-width: 880px) {
   .nav-links { display: none; }
